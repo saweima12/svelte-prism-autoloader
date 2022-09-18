@@ -15,7 +15,7 @@ npm i prism-themes
 
 | Name               | Default                                                         |
 |--------------------|-----------------------------------------------------------------|
-| `languagesPath`     | https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/ |
+| `languagesPath`    | https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/ |
 | `useMinified`      | true                                                            |
 | `autoHighlightAll` | false                                                           |
 
@@ -98,3 +98,7 @@ onMount(() => {
 />
 
 ```
+
+## Reference
+
+[Offical Github](https://github.com/PrismJS/prism/blob/master/plugins/autoloader/prism-autoloader.js)

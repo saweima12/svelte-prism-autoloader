@@ -1,7 +1,9 @@
 <script lang="ts">
     import type { PageData } from './$types';
     // @ts-ignore
-    import 'prismjs/components/prism-core';
+    import 'prismjs/components/prism-core.min.js';
+    import 'prismjs/plugins/line-numbers/prism-line-numbers'
+    import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
     import "prism-themes/themes/prism-dracula.min.css"
     import AutoLoader from '$lib/autoloader.svelte'
 
@@ -12,8 +14,8 @@
     let code = `<pre><code class="language-python">print("hello, world")</code></pre>`
 </script>
 
-<article>
-    <div class="goback">
+<article class="line-numbers">
+    <div class="goback" >
         <a href="/">← Home</a>
     </div>
 
