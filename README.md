@@ -34,16 +34,16 @@ npm i prism-themes
 
 ## Example
 
-- Use `Prismjs.highlightAll()`
+- Use `Prism.highlightAll()`
 
 ```svelte
 <script lang="ts">
 import { onMount } from 'svelte';
 import Prism from 'prismjs'
 import "prism-themes/themes/prism-dracula.min.css"
-import AutoLoader from '$lib/autoloader.svelte'
+import { AutoLoader } from 'svelte-prism-autoloader';
 
- let code = `<pre><code class="language-python">print("hello, world")</code></pre>`
+let code = `<pre><code class="language-python">print("hello, world")</code></pre>`
 
 onMount(() => {
     Prism.highlightAll()
@@ -62,17 +62,17 @@ onMount(() => {
 
 ```svelte
 <script lang="ts">
-    import type { PageData } from './$types';
-    // @ts-ignore
-    import 'prismjs/components/prism-core';
-    import "prism-themes/themes/prism-dracula.min.css"
-    import AutoLoader from '$lib/autoloader.svelte'
+import type { PageData } from './$types';
+// @ts-ignore
+import 'prismjs/components/prism-core';
+import "prism-themes/themes/prism-dracula.min.css"
+import { AutoLoader } from 'svelte-prism-autoloader';
 
-    // load page data.
-    export let data: PageData;
-    export let { metadata, content } = data;
+// load page data.
+export let data: PageData;
+export let { metadata, content } = data;
 
-    let code = `<pre><code class="language-python">print("hello, world")</code></pre>`
+let code = `<pre><code class="language-python">print("hello, world")</code></pre>`
 </script>
 
 <article>
