@@ -18,9 +18,13 @@ specifiers:
   svelte: ^3.44.0
   svelte-check: ^2.7.1
   svelte-preprocess: ^4.10.6
+  svelte-prism-autoloader: ^0.0.1-next1
   tslib: ^2.3.1
   typescript: ^4.7.4
   vite: ^3.1.0
+
+dependencies:
+  svelte-prism-autoloader: 0.0.1-next1
 
 devDependencies:
   '@playwright/test': 1.25.2
@@ -2066,6 +2070,10 @@ packages:
       svelte: 3.50.1
       typescript: 4.8.3
     dev: true
+
+  /svelte-prism-autoloader/0.0.1-next1:
+    resolution: {integrity: sha512-fzZy9JFNhXqBQbWcHXUcNU2JoLho+YTjWb4Xp/uMkrwDxsNfo5oazGlUgfK+gDLHrJoxVn2mvt/8Btfo9dSl+w==}
+    dev: false
 
   /svelte/3.50.1:
     resolution: {integrity: sha512-bS4odcsdj5D5jEg6riZuMg5NKelzPtmsCbD9RG+8umU03TeNkdWnP6pqbCm0s8UQNBkqk29w/Bdubn3C+HWSwA==}
