@@ -1,6 +1,7 @@
 {
 	"name": "svelte-prism-autoloader",
 	"version": "0.0.3",
+	"keywords": ["svelte", "prism", "autoloader", "highlight"],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
