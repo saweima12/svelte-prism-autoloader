@@ -1,6 +1,7 @@
 <script lang="ts">
     import { lang_aliases, lang_dependencies } from './langdata';
     import type { LangDataItem } from './langdata';
+	import type { Prism as PrismType } from './prism';
 	import { onMount } from 'svelte';
     // export parameter.
     export let languagesPath: string = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/";
@@ -8,23 +9,28 @@
 	export let autoHighlightAll: boolean = false;
 
     let langData: Record<string, LangDataItem> = {};
-	let Prism: any = undefined;
+    let Prism: PrismType | undefined = undefined;
 
 	$: {
 		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 			// @ts-ignore
 			Prism = window.Prism;
-			registerPlugin();
+			if (Prism) registerPlugin();
 		}
 	}
 
 	onMount(async () => {
-		registerPlugin();
+		if (Prism && autoHighlightAll) {
+			Prism.highlightAll();
+		}
 	})
 
+	// add to prism.plugins
 	const registerPlugin = () => {
-		// add to prism.plugins
 		if (!Prism) return;
+
+		// to avoid Repeat registration.
+		if ('autoloader' in Prism.plugins) return;
 
 		Prism.plugins.autoloader = {
 			languages_path: languagesPath,
@@ -52,14 +58,11 @@
 			if (!deps.every(isLoaded)) {
 				// the language or some dependencies aren't loaded
 				loadLanguages(deps, function () {
+					if (!Prism) return;
 					Prism.highlightElement(element);
 				});
 			}
 		});
-
-		if (autoHighlightAll) {
-			Prism.highlightAll();
-		}
 	}
 
     /**
@@ -252,5 +255,4 @@
 			callbacks.length = 0;
 		}
 	}
-
 </script>
