@@ -1,0 +1,21 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ELIFECYCLE",
+    "errno": "ENOENT",
+    "syscall": "spawn",
+    "file": "sh",
+    "pkgid": "svelte-prism-autoloader@0.0.3",
+    "stage": "dev",
+    "script": "vite dev",
+    "pkgname": "svelte-prism-autoloader",
+    "err": {
+      "name": "pnpm",
+      "message": "svelte-prism-autoloader@0.0.3 dev: `vite dev`\nspawn ENOENT",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: svelte-prism-autoloader@0.0.3 dev: `vite dev`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/usr/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.11/node_modules/pnpm/dist/pnpm.cjs:92384:22)\n    at ChildProcess.emit (node:events:513:28)\n    at maybeClose (node:internal/child_process:1091:16)\n    at ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+    }
+  }
+}

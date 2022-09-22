@@ -1,7 +1,7 @@
 <section>
     <ul>
         <li>
-            <a data-sveltekit-prefetch href="/node">Node Module Test</a>
+            <a data-sveltekit-prefetch href="/test">Node Module Test</a>
         </li>
     </ul>
 </section>
