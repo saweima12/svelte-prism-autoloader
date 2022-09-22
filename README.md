@@ -96,3 +96,8 @@ npm i prism-themes
 ## Reference
 
 [Offical Github](https://github.com/PrismJS/prism/blob/master/plugins/autoloader/prism-autoloader.js)
+
+
+## Changelog
+
+v0.0.3 - Fix: avoid double registration of Complete hook
