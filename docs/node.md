@@ -1,5 +1,5 @@
 ---
-title: "NodeJs Prismjs CodeBlock Test"
+title: 'NodeJs Prismjs CodeBlock Test'
 ---
 
 ## Python Block
@@ -10,8 +10,8 @@ from sanic import Sanic
 app = Sanic(__name__)
 ```
 
-
 ## Golang Block
+
 ```go
 import "fmt"
 
